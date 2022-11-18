@@ -1,4 +1,148 @@
-:root{
-    line-height: 1.6;
+:root {
+    /* line-height: 1.6; */
+    --primary-color: #6b4b3e;
+    --font-color: #b377d4;
+    --wild-color: #ec6d6a;
+    --background-color: #FAE3C6;
+    --radius : 15px;
 }
 
+body {
+    margin-top: 0;
+    background-color: var(--background-color);
+}
+
+/*********************************************************/
+/************************ en-tete ************************/
+/*********************************************************/
+
+header {
+    /* border: 3px solid red; */
+    background: #bea7e5;
+    border-radius: 0;
+    position: sticky;
+    top: 0;
+    color: var(--wild-color);
+}
+
+.mask-head {
+    background: var(--primary-color);
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--wild-color);
+    border-radius: var(--radius)
+
+}
+
+.logo-name {
+    display: flex;
+  
+    align-items: center;
+}
+
+.logo {
+    height: 12vh;
+}
+
+.wild {
+    height: 100%;
+}
+
+
+.bar-box {
+    display: flex;
+    flex-direction: column;
+    gap: 3;
+    border: 1px solid;
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bar {
+    width: 30px;
+    border: 3px solid;
+    margin: 4px;
+}
+
+.smartphone {
+    position: absolute;
+    display: none;
+}
+
+.desktop {
+    display: none;
+}
+
+.desktop ul {
+    display: flex;
+    gap: 10px;
+}
+
+
+/*********************************************************/
+/************************ les cours **********************/
+/*********************************************************/
+
+p {
+    margin: 16px;
+}
+
+.teaching {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid; */
+    /*^^^^ a delete ^^^^*/
+    align-items: center;
+
+}
+
+.first-title {
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 8px;
+}
+.theme{
+    color: var(--font-color);
+}
+.teaching-theme {
+background-color: var(--font-color);
+    justify-content: left;
+    align-items: center;
+    border-radius: var(--radius);
+}
+
+/*********************************************************/
+/*********************** les articles ********************/
+/*********************************************************/
+
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.img-art {
+    width: 90vw;
+    align-self: center;
+}
