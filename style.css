@@ -1,15 +1,35 @@
 :root {
-    /* line-height: 1.6; */
+
     --primary-color: #6b4b3e;
     --font-color: #b377d4;
-    --wild-color: #ec6d6a;
+    --wild-color: #ec6d6a;  
     --background-color: #FAE3C6;
-    --radius : 15px;
+    --radius: 15px;
+    --font-defaut-size: 1rem;
+    --font-family: 'Alegreya Sans', sans-serif;
+}
+
+font-family: 'Alegreya Sans',
+sans-serif;
+
+h1 {
+
+    /* font-size: calc(2*var(--font-defaut-size)); */
+    font-family: var(--font-family);
+}
+
+h2 {
+    font-size: calc(1.5*var(--font-defaut-size));
+    margin: 5px;
 }
 
 body {
-    margin-top: 0;
+
     background-color: var(--background-color);
+}
+
+main {
+    margin: 10px;
 }
 
 /*********************************************************/
@@ -18,7 +38,6 @@ body {
 
 header {
     /* border: 3px solid red; */
-    background: #bea7e5;
     border-radius: 0;
     position: sticky;
     top: 0;
@@ -31,14 +50,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid var(--wild-color);
-    border-radius: var(--radius)
-
+    /* border: 1px solid var(--wild-color); */
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
 }
 
 .logo-name {
     display: flex;
-  
     align-items: center;
 }
 
@@ -55,9 +73,11 @@ header {
     display: flex;
     flex-direction: column;
     gap: 3;
-    border: 1px solid;
+    border: 1px solid var(--wild-color);
+    border-radius: var(--radius);
     margin-right: 10px;
     background-color: transparent;
+    z-index: 999999999;
 }
 
 a {
@@ -66,13 +86,20 @@ a {
 
 .bar {
     width: 30px;
-    border: 3px solid;
+    border: 3px solid var(--wild-color);
     margin: 4px;
 }
 
 .smartphone {
     position: absolute;
+    right: 5px;
+    background: var(--primary-color);
     display: none;
+
+}
+
+.smartphone>ul>li {
+    margin: 10px;
 }
 
 .desktop {
@@ -85,44 +112,82 @@ a {
 }
 
 
-/*********************************************************/
-/************************ les cours **********************/
-/*********************************************************/
+/***********************************************************/
+/************************ les Notions **********************/
+/***********************************************************/
 
 p {
     margin: 16px;
 }
 
-.teaching {
+.thematique {
+    margin-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid; */
-    /*^^^^ a delete ^^^^*/
+    border: 1px solid var(--primary-color);
+    border-radius: var(--radius);
     align-items: center;
-
 }
 
-.first-title {
-    margin-bottom: 5px;
+.Titre-notion {
+    margin: 5px;
+    margin-bottom: 0;
 }
 
-ul {
+.theme-content {
+    width: 100%;
+}
+
+nav {
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     padding: 0;
     margin-top: 8px;
 }
-.theme{
-    color: var(--font-color);
+
+button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    /* border-radius: 15px ; */
+    cursor: pointer;
+    padding: 5px;
 }
-.teaching-theme {
-background-color: var(--font-color);
-    justify-content: left;
-    align-items: center;
+
+
+.theme {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.notion-theme {
+    display: flex;
+    background-color: var(--primary-color);
+    /* padding-bottom: 10px;   */
+    justify-items: center;
     border-radius: var(--radius);
+    margin: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+
 }
+
+.para-notion {
+    color: var(--background-color);
+    padding: 5px;
+    display: none;
+    justify-self: center;
+    z-index: 99999;
+}
+
+#open-html,
+#open-css,
+#open-JS {
+    display: none;
+}
+
+
 
 /*********************************************************/
 /*********************** les articles ********************/
@@ -130,9 +195,13 @@ background-color: var(--font-color);
 
 
 .article {
+    margin-block: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--radius);
+
 }
 
 .box-article {
@@ -143,6 +212,36 @@ background-color: var(--font-color);
 
 
 .img-art {
+    border-radius: var(--radius);
     width: 90vw;
     align-self: center;
 }
+
+/*********************************************************/
+/*********************** footer **************************/
+/*********************************************************/
+
+footer {
+    position: sticky;
+    bottom: 0;
+    color: var(--wild-color);
+}
+
+.foot {
+    display: flex;
+    background-color: var(--primary-color);
+    justify-content: space-between;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+a {
+    margin: 8px;
+    color: var(--wild-color);
+}
+
+/******************************************/
+/*************** desktop ******************/
+/******************************************/
+
+@media (min-width:769px) {}
