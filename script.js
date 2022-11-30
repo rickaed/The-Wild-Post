@@ -1,28 +1,33 @@
-function altern_text(id) {
-    let para = document.getElementById(id);
-    if (para.style.display == "none") {
-        document.getElementById("open-html").style.display = "none";
-        document.getElementById("open-css").style.display = "none";
-        document.getElementById("open-JS").style.display = "none";
-        para.style.display = "inline";
-    } else {
-        para.style.display = "none";
-    }
-}
-function inline(id) {
-    const list = document.getElementById(id);
-    if (list.style.display == "none") {
-        list.style.display = "inline";
-    } else {
-        list.style.display = "none";
-    }
-}
-    /*if  (id == none){
-display none sur tout .
-ouvrrir id
-}else {
-display none sur mon id
-}
+const menuList = document.querySelector(".smartphone")
+const buttonMenu = document.querySelector(".bar-box")
 
+/***************************************************/
+/****************** Toggle menu ********************/
+/***************************************************/
 
-*/
+buttonMenu.addEventListener("click",function(){
+    menuList.classList.toggle("visible")    
+    
+})
+
+/***************************************************/
+/****************** Toggle notion ******************/
+/***************************************************/
+const htmlButton = document.querySelector(".HTML-button")
+const cssButton = document.querySelector("CSS-button")
+const jsButton = document.querySelector("JS-button")
+const openTheme = [
+   {theme : `document.querySelector("#open-html")`},
+    {theme : `document.querySelector("#open-css")`},
+    {theme : `document.querySelector("#openjs")`}
+];
+//          hide notions
+htmlButton.addEventListener(clic,function(){
+    for (let i = 0; i < openTheme.length; i++) {
+        openTheme[i].theme.classList.toggle("none")
+        
+        
+    }
+})
+//          affichage notion
+

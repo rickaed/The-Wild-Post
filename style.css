@@ -2,20 +2,20 @@
 
     --primary-color: #6b4b3e;
     --font-color: #b377d4;
-    --wild-color: #ec6d6a;  
+    --wild-color: #ec6d6a;
     --background-color: #FAE3C6;
     --radius: 15px;
-    --font-defaut-size: 1rem;
+    --font-size-defaut: 1rem;
     --font-family: 'Alegreya Sans', sans-serif;
+    --font-family-H1: "Pirata One"
 }
 
-font-family: 'Alegreya Sans',
-sans-serif;
 
 h1 {
 
     /* font-size: calc(2*var(--font-defaut-size)); */
-    font-family: var(--font-family);
+    font-family: var(--font-family-H1);
+    font-size: 2rem;
 }
 
 h2 {
@@ -60,24 +60,24 @@ header {
     align-items: center;
 }
 
-.logo {
+.logo-content {
     height: 12vh;
+    ;
 }
 
 .wild {
     height: 100%;
+    margin-left: 10px;
 }
 
 
 .bar-box {
     display: flex;
     flex-direction: column;
-    gap: 3;
     border: 1px solid var(--wild-color);
     border-radius: var(--radius);
     margin-right: 10px;
     background-color: transparent;
-    z-index: 999999999;
 }
 
 a {
@@ -130,7 +130,7 @@ p {
     align-items: center;
 }
 
-.Titre-notion {
+.Title-notion {
     margin: 5px;
     margin-bottom: 0;
 }
@@ -154,7 +154,7 @@ button {
 }
 
 
-.theme {
+.theme-button {
 
     display: flex;
     flex-direction: row;
@@ -173,21 +173,33 @@ button {
 
 }
 
-.para-notion {
+.notion-p {
     color: var(--background-color);
     padding: 5px;
-    display: none;
     justify-self: center;
-    z-index: 99999;
+    /* display : inline */
+
 }
 
-#open-html,
-#open-css,
-#open-JS {
+#open-html {
+    display: none;
+}
+
+#open-css {
+    display: none;
+}
+
+#open-js {
     display: none;
 }
 
 
+.visible {
+    display: inline
+}
+.none{
+    display: none;
+}
 
 /*********************************************************/
 /*********************** les articles ********************/
@@ -214,7 +226,7 @@ button {
 .img-art {
     border-radius: var(--radius);
     width: 90vw;
-    align-self: center;
+   max-width:480px ;
 }
 
 /*********************************************************/

@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,300;1,400&family=Pirata+One&display=swap"
+        rel="stylesheet">
     <title>The Wild Post</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -15,7 +21,7 @@
     <header>
         <section class="mask-head">
             <section class="logo-name">
-                <div class="logo">
+                <div class="logo-content">
                     <img class="wild" src="https://avatars.githubusercontent.com/u/8874047?s=280&v=4"
                         alt="logo wild code school">
                 </div>
@@ -24,13 +30,13 @@
 
             <!-- menu smartphone -->
 
-            <section class="bar-menu" >
-                <button class="bar-box" onclick="inline('menu');">
+            <section class="bar-menu">
+                <button class="bar-box">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
                 </button>
-                <nav class="smartphone" id="menu">
+                <nav class="smartphone ">
                     <ul>
                         <li><a href="#">Journée d'intégration</a></li>
                         <li><a href="#">Calendrier</a></li>
@@ -57,33 +63,35 @@
 
     <main>
         <section class="thematique">
-            <h2 class="Titre-notion">Les Notions </h2>
+            <h2 class="Title-notion">Les Notions </h2>
             <div class="theme-content">
-                <nav class="theme">
-                    <button onclick="altern_text('open-html') ;">
+
+                <!--nav class=theme-button a effacer en desktop -->
+                <nav class="theme-button">
+                    <button class="HTML-button">
                         HTML
                     </button>
-                    <button onclick="altern_text('open-css') ;">
+                    <button class="CSS-button">
                         CSS
                     </button>
-                    <button onclick="altern_text('open-JS') ;">
+                    <button class="JS-button">
                         JavaScript
                     </button>
                 </nav>
                 <div class="notion-theme">
-                    <p class="para-notion" id="open-html">
+                    <p class="notion-p" id="open-html">
                         le HTML (Hyper Text Markup Language => language de balises hypertext pour les anglophobe).<br>
                         concerne le contenu texte et image, ainsi que la structure global de votre page web préféré.<br>
                         le squelette en somme.
                     </p>
-                    <!-- </div>
+                <!-- </div>
                 <div class="notion-theme"> -->
-                    <p class="para-notion" id="open-css">
+                    <p class="notion-p" id="open-css">
                         CSS.
                     </p>
-                    <!-- </div>
+                <!-- </div>
                 <div class="notion-theme"> -->
-                    <p class="para-notion" id="open-JS">
+                    <p class="notion-p" id="open-js">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius magnam excepturi, aliquid
                         blanditiis
                         commodi doloribus aut consequuntur repudiandae obcaecati omnis quis veritatis quas cumque fugiat
