@@ -217,24 +217,27 @@ button {
 
 }
 
-#open-html {
+.open-html {
+    display: none;
+    /* display: none; */
+}
+
+.open-css {
     display: none;
 }
 
-#open-css {
+.open-js {
     display: none;
 }
 
-#open-js {
-    display: none;
+.test{
+    font-size: 1rem;
 }
-
-
 .visible {
     display: block
 }
 
-.none {
+.invisible {
     display: none;
 }
 
@@ -316,7 +319,9 @@ button {
     justify-content: space-between;
     align-items: last baseline;
 }
-
+textarea{
+    resize: none;
+}
 .txt-area {
     margin: auto;
     width: 100%;
