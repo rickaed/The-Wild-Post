@@ -1,14 +1,26 @@
-const menuList = document.querySelector(".smartphone")
-const buttonMenu = document.querySelector(".bar-box")
-
 /***************************************************/
 /****************** Toggle menu ********************/
 /***************************************************/
+
+const menuList = document.querySelector(".smartphone")
+const buttonMenu = document.querySelector(".bar-box")
 
 buttonMenu.addEventListener("click",function(){
     menuList.classList.toggle("visible")    
     
 })
+
+/***************************************************/
+/***************** toggle connexion ****************/
+/***************************************************/
+
+const connexion = document.querySelector('.conect-title')
+const form= document.querySelector('.form-connexion')
+ 
+connexion.addEventListener("click", function(){
+    form.classList.toggle("visible")
+})
+
 
 /***************************************************/
 /****************** Toggle notion ******************/
@@ -26,7 +38,7 @@ htmlButton.addEventListener(clic,function(){
     for (let i = 0; i < openTheme.length; i++) {
         openTheme[i].theme.classList.toggle("none")
         
-        
+
     }
 })
 //          affichage notion

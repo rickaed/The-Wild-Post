@@ -32,6 +32,11 @@ main {
     margin: 10px;
 }
 
+.form {
+    max-width: 90px;
+    margin: 0 auto 0 24px;
+}
+
 /*********************************************************/
 /************************ en-tete ************************/
 /*********************************************************/
@@ -110,6 +115,37 @@ a {
     display: flex;
     gap: 10px;
 }
+
+/*******************************************/
+/**************** connexion ****************/
+/*******************************************/
+
+.conect-title {
+    margin: 8px auto 8px 16px;
+}
+
+.form-connexion {
+    max-width: 150px;
+    margin: 0 auto 0 24px;
+    display: none;
+}
+.connexion{
+    display:flex;
+    justify-content: center;
+    align-items: last baseline;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    margin-top: 4px;
+    width: 150px;
+}
+
+
+
 
 
 /***********************************************************/
@@ -195,9 +231,10 @@ button {
 
 
 .visible {
-    display: inline
+    display: block
 }
-.none{
+
+.none {
     display: none;
 }
 
@@ -220,14 +257,81 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 90%;
+    text-align: justify;
+}
+
+.box-img {
+
+    max-width: 480px;
+    margin-inline: 16px;
+    margin-bottom: 16px;
+
 }
 
 
 .img-art {
     border-radius: var(--radius);
-    width: 90vw;
-   max-width:480px ;
+    max-width: 100%;
 }
+
+
+
+
+
+/*********************************************************/
+/***************** formulaire d'ajout ********************/
+/*********************************************************/
+.ads-form {
+    margin-block: 10px;
+    background-color: var(--primary-color);
+    /* width: 90%; */
+    margin: 0 16px;
+    color: var(--wild-color);
+    border-radius: var(--radius);
+}
+
+.ads-form-content {
+    padding-top: 16px;
+    margin: 16px;
+}
+
+.input-txt {
+    margin: 16px;
+    display: block;
+    max-width: 200px;
+}
+
+#user,
+#ads-title {
+    width: 100%;
+}
+
+#ads-art {
+    margin-top: 6px;
+}
+
+.end-ads {
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+}
+
+.txt-area {
+    margin: auto;
+    width: 100%;
+}
+
+.ads-photo-lab {
+    width: 150px;
+}
+
+#ads-photo {
+
+    display: block;
+    margin-bottom: 8px;
+}
+
 
 /*********************************************************/
 /*********************** footer **************************/
