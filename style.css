@@ -1,5 +1,4 @@
 :root {
-
     --primary-color: #6b4b3e;
     --font-color: #b377d4;
     --wild-color: #ec6d6a;
@@ -12,7 +11,6 @@
 
 
 h1 {
-
     /* font-size: calc(2*var(--font-defaut-size)); */
     font-family: var(--font-family-H1);
     font-size: 2rem;
@@ -24,7 +22,6 @@ h2 {
 }
 
 body {
-
     background-color: var(--background-color);
 }
 
@@ -365,4 +362,11 @@ a {
 /*************** desktop ******************/
 /******************************************/
 
-@media (min-width:769px) {}
+@media (min-width:769px) and (max-width : 1440px) {
+    .bar-menu{
+        display: none;
+    }
+    .desktop{
+        display: block;
+    }
+}
