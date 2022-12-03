@@ -23,6 +23,8 @@ h2 {
 
 body {
     background-color: var(--background-color);
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 main {
@@ -114,11 +116,28 @@ a {
 }
 
 /*******************************************/
+/**************** top main *****************/
+/*******************************************/
+.Grid-top-main {
+    display: grid;
+    grid-template-columns: repeat(3, calc(100%/3));
+    grid-template-rows: repeat(4, auto);
+   
+}
+
+/*******************************************/
 /**************** connexion ****************/
 /*******************************************/
 
+.connection-content {
+    grid-column: 1/span3;
+    grid-row: 1/2;
+    height: fit-content;
+    /* border: 1px var(--primary-color) solid; */
+}
+
 .conect-title {
-    margin: 8px auto 8px 16px;
+    margin: 8px;
 }
 
 .form-connexion {
@@ -126,11 +145,13 @@ a {
     margin: 0 auto 0 24px;
     display: none;
 }
-.connexion{
-    display:flex;
+
+.connexion {
+    display: flex;
     justify-content: center;
     align-items: last baseline;
 }
+
 label {
     display: block;
     margin-bottom: 8px;
@@ -145,15 +166,64 @@ input {
 
 
 
-/***********************************************************/
-/************************ les Notions **********************/
-/***********************************************************/
+/*****************************************************/
+/*********************** les Bases *******************/
+/*****************************************************/
+.box-bases{
+    grid-column: 1/span3;
+    grid-row: 2/span3;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--radius);
 
-p {
-    margin: 16px;
+}
+.Title-bases {
+    grid-column: 1/span3;
+    grid-row: 2/3;
+    height: fit-content;
+    justify-self: center;
 }
 
-.thematique {
+button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border-radius: 10px ;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px;
+}
+
+.HTML-button {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.CSS-button {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.JS-button {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.notion-p {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    grid-column: 1/span3;
+    grid-row: 4/5;
+    height: fit-content;
+    justify-self: center;
+    margin: 15px;
+    border-radius: var(--radius);
+    padding: 15px;
+}
+
+
+
+
+
+/* .Bases-content {
     margin-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -161,58 +231,18 @@ p {
     border: 1px solid var(--primary-color);
     border-radius: var(--radius);
     align-items: center;
-}
-
-.Title-notion {
-    margin: 5px;
-    margin-bottom: 0;
-}
-
-.theme-content {
-    width: 100%;
-}
-
-nav {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 8px;
-}
-
-button {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    /* border-radius: 15px ; */
-    cursor: pointer;
-    padding: 5px;
-}
+} */
 
 
-.theme-button {
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
 
-.notion-theme {
-    display: flex;
-    background-color: var(--primary-color);
-    /* padding-bottom: 10px;   */
-    justify-items: center;
-    border-radius: var(--radius);
-    margin: 10px;
-    margin-bottom: 0px;
-    padding-bottom: 5px;
 
-}
 
-.notion-p {
-    color: var(--background-color);
-    padding: 5px;
-    justify-self: center;
-    /* display : inline */
 
-}
+
+
+
+
 
 .open-html {
     display: none;
@@ -227,9 +257,10 @@ button {
     display: none;
 }
 
-.test{
+.test {
     font-size: 1rem;
 }
+
 .visible {
     display: block
 }
@@ -316,9 +347,11 @@ button {
     justify-content: space-between;
     align-items: last baseline;
 }
-textarea{
+
+textarea {
     resize: none;
 }
+
 .txt-area {
     margin: auto;
     width: 100%;
@@ -362,11 +395,61 @@ a {
 /*************** desktop ******************/
 /******************************************/
 
-@media (min-width:769px) and (max-width : 1440px) {
-    .bar-menu{
+@media screen and (min-width : 769px) {
+    /******************************************/
+    /**************** header ******************/
+    /******************************************/
+
+
+    .bar-menu {
         display: none;
     }
-    .desktop{
+
+    .desktop {
         display: block;
+        margin-bottom: 8px;
+
     }
+
+    .logo-content {
+        height: 5rem;
+    }
+
+    .wild {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    .mask-head {
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    /******************************************/
+    /****************** main ******************/
+    /******************************************/
+    main {
+        display: flex;
+        gap: 10px;
+    }
+
+
+    .Grid-top-min {
+        width: calc(100%/3);
+    }
+
+    /* .notion-p{
+
+    } */
+
+
+
+    .articles {
+        max-width: calc((100%/3)*2);
+    }
+
 }

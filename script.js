@@ -15,10 +15,10 @@ buttonMenu.addEventListener("click", function () {
 /***************************************************/
 
 const connexion = document.querySelector('.conect-title')
-const form = document.querySelector('.form-connexion')
+const formDisplay = document.querySelector('.form-connexion')
 
 connexion.addEventListener("click", function () {
-    form.classList.toggle("visible")
+    formDisplay.classList.toggle("visible")
 })
 
 
@@ -38,48 +38,46 @@ const openJs = document.querySelector("#open-js");
 // };
 
 
-//          switch notions < width 780 px
+if (outerWidth < 769) {
 
-
-htmlButton.addEventListener("click", function () {
-    if (!openHtml.classList.contains("visible")) {
-        openHtml.classList.add("visible")
-        if (openCss.classList.contains("visible")) {
-            openCss.classList.remove("visible")
-        } if (openJs.classList.contains("visible")) {
-            openJs.classList.remove("visible")
-        }
-    } else {
-        openHtml.classList.remove("visible")
-    }
-})
-
-
-cssButton.addEventListener("click", function () {
-    if (!openCss.classList.contains("visible")) {
-        openCss.classList.add("visible")
-        if (openHtml.classList.contains("visible")) {
+    htmlButton.addEventListener("click", function () {
+        if (!openHtml.classList.contains("visible")) {
+            openHtml.classList.add("visible")
+            if (openCss.classList.contains("visible")) {
+                openCss.classList.remove("visible")
+            } if (openJs.classList.contains("visible")) {
+                openJs.classList.remove("visible")
+            }
+        } else {
             openHtml.classList.remove("visible")
-        } if (openJs.classList.contains("visible")) {
-            openJs.classList.remove("visible")
         }
-    } else {
-        openCss.classList.remove("visible")
-    }
-})
+    })
 
-jsButton.addEventListener("click", function () {
-    if (!openJs.classList.contains("visible")) {
-        openJs.classList.add("visible")
-        if (openHtml.classList.contains("visible")) {
-            openHtml.classList.remove("visible")
-        } if (openCss.classList.contains("visible")) {
+    cssButton.addEventListener("click", function () {
+        if (!openCss.classList.contains("visible")) {
+            openCss.classList.add("visible")
+            if (openHtml.classList.contains("visible")) {
+                openHtml.classList.remove("visible")
+            } if (openJs.classList.contains("visible")) {
+                openJs.classList.remove("visible")
+            }
+        } else {
             openCss.classList.remove("visible")
         }
-    } else {
-        openJs.classList.remove("visible")
-    }
-})
+    })
 
+    jsButton.addEventListener("click", function () {
+        if (!openJs.classList.contains("visible")) {
+            openJs.classList.add("visible")
+            if (openHtml.classList.contains("visible")) {
+                openHtml.classList.remove("visible")
+            } if (openCss.classList.contains("visible")) {
+                openCss.classList.remove("visible")
+            }
+        } else {
+            openJs.classList.remove("visible")
+        }
+    })
+}
 
 
