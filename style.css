@@ -1,5 +1,4 @@
 :root {
-
     --primary-color: #6b4b3e;
     --font-color: #b377d4;
     --wild-color: #ec6d6a;
@@ -12,7 +11,6 @@
 
 
 h1 {
-
     /* font-size: calc(2*var(--font-defaut-size)); */
     font-family: var(--font-family-H1);
     font-size: 2rem;
@@ -24,17 +22,23 @@ h2 {
 }
 
 body {
-
     background-color: var(--background-color);
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 main {
     margin: 10px;
 }
 
-/*********************************************************/
-/************************ en-tete ************************/
-/*********************************************************/
+.form {
+    max-width: 90px;
+    margin: 0 auto 0 24px;
+}
+
+/*****************************************************/
+/************************ en-tete ********************/
+/*****************************************************/
 
 header {
     /* border: 3px solid red; */
@@ -111,99 +115,131 @@ a {
     gap: 10px;
 }
 
+/*****************************************************/
+/********************* top main **********************/
+/*****************************************************/
+.Grid-top-main {
+    display: grid;
+    grid-template-columns: repeat(3, calc(100%/3));
+    grid-template-rows: repeat(4, auto);
 
-/***********************************************************/
-/************************ les Notions **********************/
-/***********************************************************/
-
-p {
-    margin: 16px;
 }
 
-.thematique {
-    margin-top: 10px;
-    padding-bottom: 10px;
+/*****************************************************/
+/********************* connexion *********************/
+/*****************************************************/
+
+.connection-content {
+    grid-column: 1/span3;
+    grid-row: 1/2;
+    height: fit-content;
+    /* border: 1px var(--primary-color) solid; */
+}
+
+.conect-title {
+    margin: 8px;
+}
+
+.form-connexion {
+    max-width: 150px;
+    margin: 0 auto 0 24px;
+    display: none;
+}
+
+.connexion {
     display: flex;
-    flex-direction: column;
+
+    align-items: last baseline;
+}
+
+.flex-connect {
+    width: 60%;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    margin-top: 4px;
+    width: 150px;
+}
+
+.btn-submit {
+    margin-left: 25px;
+}
+
+
+
+
+/*****************************************************/
+/*********************** les Bases *******************/
+/*****************************************************/
+.box-bases {
+    grid-column: 1/span3;
+    grid-row: 2/span3;
     border: 1px solid var(--primary-color);
     border-radius: var(--radius);
-    align-items: center;
+
 }
 
-.Title-notion {
-    margin: 5px;
-    margin-bottom: 0;
-}
-
-.theme-content {
-    width: 100%;
-}
-
-nav {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 8px;
+.Title-bases {
+    grid-column: 1/span3;
+    grid-row: 2/3;
+    height: fit-content;
+    justify-self: center;
 }
 
 button {
     background-color: var(--primary-color);
     color: var(--background-color);
-    /* border-radius: 15px ; */
+    border-radius: 10px;
     cursor: pointer;
     padding: 5px;
-}
-
-
-.theme-button {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.notion-theme {
-    display: flex;
-    background-color: var(--primary-color);
-    /* padding-bottom: 10px;   */
-    justify-items: center;
-    border-radius: var(--radius);
     margin: 10px;
-    margin-bottom: 0px;
-    padding-bottom: 5px;
+}
 
+.HTML-button {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.CSS-button {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.JS-button {
+    grid-column: 3/4;
+    grid-row: 3/4;
 }
 
 .notion-p {
+    display: none;
+    background-color: var(--primary-color);
     color: var(--background-color);
-    padding: 5px;
+    grid-column: 1/span3;
+    grid-row: 4/5;
+    height: fit-content;
     justify-self: center;
-    /* display : inline */
-
-}
-
-#open-html {
-    display: none;
-}
-
-#open-css {
-    display: none;
-}
-
-#open-js {
-    display: none;
+    margin: 15px;
+    border-radius: var(--radius);
+    padding: 15px;
 }
 
 
 .visible {
-    display: inline
+    display: block
 }
-.none{
+
+.invisible {
     display: none;
 }
 
-/*********************************************************/
-/*********************** les articles ********************/
-/*********************************************************/
+/*****************************************************/
+/********************* les articles ******************/
+/*****************************************************/
 
 
 .article {
@@ -220,18 +256,87 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 90%;
+    text-align: justify;
+}
+
+.box-img {
+
+    max-width: 480px;
+    margin-inline: 16px;
+    margin-bottom: 16px;
+
 }
 
 
 .img-art {
     border-radius: var(--radius);
-    width: 90vw;
-   max-width:480px ;
+    max-width: 100%;
 }
 
-/*********************************************************/
-/*********************** footer **************************/
-/*********************************************************/
+
+
+
+
+/*****************************************************/
+/***************** formulaire d'ajout ****************/
+/*****************************************************/
+
+.ads-form {  
+    background-color: var(--primary-color);
+    color: var(--wild-color);
+    border-radius: var(--radius);
+}
+
+.ads-form-content {
+    padding-top: 16px;
+    margin: 16px;
+}
+
+.input-txt {
+    margin: 16px;
+    display: block;
+    max-width: 200px;
+}
+
+#user,
+#ads-title {
+    width: 100%;
+}
+
+#ads-art {
+    margin-top: 6px;
+}
+
+.end-ads {
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+}
+
+textarea {
+    resize: none;
+}
+
+.txt-area {
+  
+    width: 100%;
+}
+
+.ads-photo-lab {
+    width: 150px;
+}
+
+#ads-photo {
+
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+/*****************************************************/
+/*********************** footer **********************/
+/*****************************************************/
 
 footer {
     position: sticky;
@@ -252,8 +357,146 @@ a {
     color: var(--wild-color);
 }
 
-/******************************************/
-/*************** desktop ******************/
-/******************************************/
+/*****************************************************/
+/********************* desktop ***********************/
+/*****************************************************/
 
-@media (min-width:769px) {}
+@media screen and (min-width : 769px) {
+    /*************************************************/
+    /************** desktop header *******************/
+    /*************************************************/
+
+    .bar-menu {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+        margin-bottom: 8px;
+
+    }
+
+    .logo-content {
+        height: 5rem;
+    }
+
+    .wild {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    .mask-head {
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    /*************************************************/
+    /***************** desktop main ******************/
+    /*************************************************/
+    /* body {
+        display: flex;
+    } */
+
+    main {
+        display: grid;
+        grid-template-columns: calc(100%/3) calc(100%/3*2);
+        grid-template-rows: repeat(3, auto);
+        gap: 10px;
+    }
+
+    /*************************************************/
+    /***************** desktop left ******************/
+    /*************************************************/
+
+    .Grid-top-main {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 100%;
+        height: fit-content;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, auto);
+
+    }
+
+    .connection-content {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: fit-content;
+    }
+
+    .box-bases {
+        grid-column: 1/2;
+        grid-row: 2/6;
+    }
+
+    .Title-bases {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        height: fit-content;
+
+    }
+
+    .HTML-button,
+    .open-html {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .CSS-button,
+    .open-css {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .JS-button,
+    .open-js {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    .notion-p {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+
+        height: fit-content;
+        justify-self: center;
+        margin: 15px;
+        border-radius: var(--radius);
+        padding: 15px;
+        display: block;
+    }
+
+    /*************************************************/
+    /***************** desktop right *****************/
+    /*************************************************/
+
+    .articles {
+        grid-column: 2/3;
+        grid-row: 1/span3;
+        /* width: calc(100%/3*2); */
+    }
+
+    .ads-form {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        
+        
+    }
+    .txt-area-content{
+        width: 100%;
+    }
+    footer{
+        position: initial;
+    }
+
+
+
+
+}
