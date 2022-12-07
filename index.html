@@ -64,7 +64,7 @@
     <main>
 
         <!-- element de connexion -->
-        <section class="Grid-top-main">
+        <section class="Grid-top-main grid-left">
             <div class="connection-content">
                 <p class="conect-title">Connexion</p>
                 <form action="" method="get" class="form-connexion form">
@@ -215,30 +215,34 @@
                 </span>
             </div>
         </section>
+
+        <form action="" method="get" class="ads-form">
+            <fieldset class="ads-form-content">Proposer un article
+                <div class="input-txt">
+                    <label for="user">nom : </label><input type="text" name="user" id="user" required>
+
+                    <label for="ads-title">Titre de l'article : </label><input type="text" name="ads-title"
+                        id="ads-title" required>
+                </div>
+                <div class="txt-area-content">
+                    <label for="ads-art">texte de votre article : </label><textarea name="ads-art" id="ads-art"
+                        class="txt-area" required></textarea>
+                    <div class="end-ads">
+                        <label for="ads-photo" class="ads-photo-lab">joindre une image : <input type="file"
+                                name="ads-photo" id="ads-photo" accept="image/jpeg, image/png"></label>
+
+                        <input type="submit" class="btn-submit">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
     </main>
 
     <!-- formulaire d'ajout -->
 
 
 
-    <form action="" method="get" class="ads-form">
-        <fieldset class="ads-form-content">Proposer un article
-            <div class="input-txt">
-                <label for="user">nom : <input type="text" name="user" id="user" required></label>
 
-                <label for="ads-title">Titre de l'article : <input type="text" name="ads-title" id="ads-title"
-                        required></label>
-            </div>
-            <label for="ads-art">texte de votre article : <textarea name="ads-art" id="ads-art" cols="30" rows="10"
-                    class="txt-area" required></textarea></label>
-            <div class="end-ads">
-                <label for="ads-photo" class="ads-photo-lab">joindre une image : <input type="file" name="ads-photo"
-                        id="ads-photo" accept="image/jpeg, image/png"></label>
-
-                <input type="submit" class="btn-submit">
-            </div>
-        </fieldset>
-    </form>
 
     <footer>
         <div class="foot">

@@ -36,9 +36,9 @@ main {
     margin: 0 auto 0 24px;
 }
 
-/*********************************************************/
-/************************ en-tete ************************/
-/*********************************************************/
+/*****************************************************/
+/************************ en-tete ********************/
+/*****************************************************/
 
 header {
     /* border: 3px solid red; */
@@ -115,19 +115,19 @@ a {
     gap: 10px;
 }
 
-/*******************************************/
-/**************** top main *****************/
-/*******************************************/
+/*****************************************************/
+/********************* top main **********************/
+/*****************************************************/
 .Grid-top-main {
     display: grid;
     grid-template-columns: repeat(3, calc(100%/3));
     grid-template-rows: repeat(4, auto);
-   
+
 }
 
-/*******************************************/
-/**************** connexion ****************/
-/*******************************************/
+/*****************************************************/
+/********************* connexion *********************/
+/*****************************************************/
 
 .connection-content {
     grid-column: 1/span3;
@@ -148,8 +148,12 @@ a {
 
 .connexion {
     display: flex;
-    justify-content: center;
+
     align-items: last baseline;
+}
+
+.flex-connect {
+    width: 60%;
 }
 
 label {
@@ -162,6 +166,9 @@ input {
     width: 150px;
 }
 
+.btn-submit {
+    margin-left: 25px;
+}
 
 
 
@@ -169,13 +176,14 @@ input {
 /*****************************************************/
 /*********************** les Bases *******************/
 /*****************************************************/
-.box-bases{
+.box-bases {
     grid-column: 1/span3;
     grid-row: 2/span3;
     border: 1px solid var(--primary-color);
     border-radius: var(--radius);
 
 }
+
 .Title-bases {
     grid-column: 1/span3;
     grid-row: 2/3;
@@ -186,7 +194,7 @@ input {
 button {
     background-color: var(--primary-color);
     color: var(--background-color);
-    border-radius: 10px ;
+    border-radius: 10px;
     cursor: pointer;
     padding: 5px;
     margin: 10px;
@@ -208,6 +216,7 @@ button {
 }
 
 .notion-p {
+    display: none;
     background-color: var(--primary-color);
     color: var(--background-color);
     grid-column: 1/span3;
@@ -220,47 +229,6 @@ button {
 }
 
 
-
-
-
-/* .Bases-content {
-    margin-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--primary-color);
-    border-radius: var(--radius);
-    align-items: center;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-.open-html {
-    display: none;
-    /* display: none; */
-}
-
-.open-css {
-    display: none;
-}
-
-.open-js {
-    display: none;
-}
-
-.test {
-    font-size: 1rem;
-}
-
 .visible {
     display: block
 }
@@ -269,9 +237,9 @@ button {
     display: none;
 }
 
-/*********************************************************/
-/*********************** les articles ********************/
-/*********************************************************/
+/*****************************************************/
+/********************* les articles ******************/
+/*****************************************************/
 
 
 .article {
@@ -310,14 +278,12 @@ button {
 
 
 
-/*********************************************************/
-/***************** formulaire d'ajout ********************/
-/*********************************************************/
-.ads-form {
-    margin-block: 10px;
+/*****************************************************/
+/***************** formulaire d'ajout ****************/
+/*****************************************************/
+
+.ads-form {  
     background-color: var(--primary-color);
-    /* width: 90%; */
-    margin: 0 16px;
     color: var(--wild-color);
     border-radius: var(--radius);
 }
@@ -353,7 +319,7 @@ textarea {
 }
 
 .txt-area {
-    margin: auto;
+  
     width: 100%;
 }
 
@@ -368,9 +334,9 @@ textarea {
 }
 
 
-/*********************************************************/
-/*********************** footer **************************/
-/*********************************************************/
+/*****************************************************/
+/*********************** footer **********************/
+/*****************************************************/
 
 footer {
     position: sticky;
@@ -391,15 +357,14 @@ a {
     color: var(--wild-color);
 }
 
-/******************************************/
-/*************** desktop ******************/
-/******************************************/
+/*****************************************************/
+/********************* desktop ***********************/
+/*****************************************************/
 
 @media screen and (min-width : 769px) {
-    /******************************************/
-    /**************** header ******************/
-    /******************************************/
-
+    /*************************************************/
+    /************** desktop header *******************/
+    /*************************************************/
 
     .bar-menu {
         display: none;
@@ -429,27 +394,109 @@ a {
 
     }
 
-    /******************************************/
-    /****************** main ******************/
-    /******************************************/
-    main {
+    /*************************************************/
+    /***************** desktop main ******************/
+    /*************************************************/
+    /* body {
         display: flex;
+    } */
+
+    main {
+        display: grid;
+        grid-template-columns: calc(100%/3) calc(100%/3*2);
+        grid-template-rows: repeat(3, auto);
         gap: 10px;
     }
 
+    /*************************************************/
+    /***************** desktop left ******************/
+    /*************************************************/
 
-    .Grid-top-min {
-        width: calc(100%/3);
+    .Grid-top-main {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 100%;
+        height: fit-content;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, auto);
+
     }
 
-    /* .notion-p{
+    .connection-content {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: fit-content;
+    }
 
-    } */
+    .box-bases {
+        grid-column: 1/2;
+        grid-row: 2/6;
+    }
 
+    .Title-bases {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        height: fit-content;
 
+    }
+
+    .HTML-button,
+    .open-html {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .CSS-button,
+    .open-css {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .JS-button,
+    .open-js {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    .notion-p {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+
+        height: fit-content;
+        justify-self: center;
+        margin: 15px;
+        border-radius: var(--radius);
+        padding: 15px;
+        display: block;
+    }
+
+    /*************************************************/
+    /***************** desktop right *****************/
+    /*************************************************/
 
     .articles {
-        max-width: calc((100%/3)*2);
+        grid-column: 2/3;
+        grid-row: 1/span3;
+        /* width: calc(100%/3*2); */
     }
+
+    .ads-form {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        
+        
+    }
+    .txt-area-content{
+        width: 100%;
+    }
+    footer{
+        position: initial;
+    }
+
+
+
 
 }
