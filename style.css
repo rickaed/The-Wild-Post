@@ -194,7 +194,7 @@ a {
     max-width: 100%;
 }
 
-.txt-art{
+.txt-art {
     margin-bottom: 8px;
 }
 
@@ -217,15 +217,23 @@ a {
     margin: 16px;
 }
 
+input {
+    margin-top: 8px;
+}
+
 .input-txt {
     margin: 16px;
     display: block;
     max-width: 200px;
+
 }
 
 #user,
 #ads-title {
     width: 100%;
+
+    margin-bottom: 8px;
+
 }
 
 #ads-art {
@@ -250,6 +258,10 @@ textarea {
 
 .ads-photo-lab {
     width: 150px;
+}
+
+.btn-submit {
+    align-self: flex-end;
 }
 
 #ads-photo {
@@ -291,9 +303,9 @@ a {
     /************** desktop header *******************/
     /*************************************************/
 
-   
 
- 
+
+
 
     .logo-content {
         height: 5rem;
@@ -358,7 +370,7 @@ a {
     .HTML {
         grid-column: 1/2;
         grid-row: 2/3;
-        
+
 
     }
 
@@ -429,7 +441,7 @@ a {
 
     .articles {
         grid-column: 2/3;
-        grid-row: 1/span3;       
+        grid-row: 1/span3;
         margin-right: 8px;
     }
 
@@ -443,12 +455,26 @@ a {
 
     }
 
+
+
+
     .txt-area-content {
         width: 100%;
     }
 
+    .block-img {
+        margin-top: 8px;
+    }
+
+    #ads-photo {
+        margin-top: 8px;
+    }
+
+
+
     footer {
         position: initial;
     }
+
 
 }
