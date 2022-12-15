@@ -11,9 +11,9 @@
 
 
 h1 {
-    /* font-size: calc(2*var(--font-defaut-size)); */
+    font-size: calc(2*var(--font-size-defaut));
     font-family: var(--font-family-H1);
-    font-size: 2rem;
+    
 }
 
 h2 {
@@ -34,15 +34,13 @@ main {
 .form {
     max-width: 90px;
     margin: 0 auto 0 24px;
-
 }
 
 /*****************************************************/
 /************************ en-tete ********************/
 /*****************************************************/
 
-header {
-    /* border: 3px solid red; */
+header {  
     border-radius: 0;
     position: sticky;
     top: 0;
@@ -56,7 +54,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid var(--wild-color); */
     border-bottom-left-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
 }
@@ -79,28 +76,26 @@ a {
     text-decoration: none;
 }
 
-
-
 /*****************************************************/
 /********************* top main **********************/
 /*****************************************************/
+
 .Grid-top-main {
     display: grid;
     grid-template-columns: repeat(3, calc(100%/3));
     grid-template-rows: repeat(3, auto);
-
 }
 
 
 /*****************************************************/
 /*********************** les Bases *******************/
 /*****************************************************/
+
 .box-bases {
     grid-column: 1/span3;
     grid-row: 1/span3;
     border: 1px solid var(--primary-color);
     border-radius: var(--radius);
-
 }
 
 .Title-bases {
@@ -169,7 +164,6 @@ a {
     align-items: center;
     border: 1px solid var(--primary-color);
     border-radius: var(--radius);
-
 }
 
 .box-article {
@@ -185,9 +179,7 @@ a {
     max-width: 480px;
     margin-inline: 16px;
     margin-bottom: 16px;
-
 }
-
 
 .img-art {
     border-radius: var(--radius);
@@ -197,10 +189,6 @@ a {
 .txt-art {
     margin-bottom: 8px;
 }
-
-
-
-
 
 /*****************************************************/
 /***************** formulaire d'ajout ****************/
@@ -225,15 +213,12 @@ input {
     margin: 16px;
     display: block;
     max-width: 200px;
-
 }
 
 #user,
 #ads-title {
     width: 100%;
-
     margin-bottom: 8px;
-
 }
 
 #ads-art {
@@ -252,7 +237,6 @@ textarea {
 }
 
 .txt-area {
-
     width: 100%;
 }
 
@@ -265,9 +249,7 @@ textarea {
 }
 
 #ads-photo {
-
     display: block;
-    /* margin-bottom: 8px; */
 }
 
 
@@ -303,10 +285,6 @@ a {
     /************** desktop header *******************/
     /*************************************************/
 
-
-
-
-
     .logo-content {
         height: 5rem;
     }
@@ -320,13 +298,9 @@ a {
     }
 
 
-
     /*************************************************/
     /***************** desktop main ******************/
     /*************************************************/
-    /* body {
-        display: flex;
-    } */
 
     main {
         display: grid;
@@ -346,7 +320,6 @@ a {
         height: fit-content;
         grid-template-columns: 100%;
         grid-template-rows: repeat(4, auto);
-
     }
 
     .connection-content {
@@ -370,10 +343,7 @@ a {
     .HTML {
         grid-column: 1/2;
         grid-row: 2/3;
-
-
     }
-
 
     .CSS {
         grid-column: 1/2;
@@ -451,12 +421,7 @@ a {
         width: 100%;
         height: fit-content;
         margin: 0;
-
-
     }
-
-
-
 
     .txt-area-content {
         width: 100%;
@@ -470,11 +435,8 @@ a {
         margin-top: 8px;
     }
 
-
-
     footer {
         position: initial;
     }
-
 
 }

@@ -1,8 +1,3 @@
-// window.location.reload
-
-
-
-
 
 /***************************************************/
 /****************** Switch notion ******************/
@@ -13,11 +8,6 @@ const jsButton = document.querySelector(".JS-button");
 const openHtml = document.querySelector("#open-html");
 const openCss = document.querySelector("#open-css");
 const openJs = document.querySelector("#open-js");
-// const openTheme = {
-//     openHtml : 'document.querySelector("#open-html")',
-//     openCss :'document.querySelector("#open-css")',
-//     openJs : 'document.querySelector("#open-js")'
-// };
 
 
 if (outerWidth < 769) {
@@ -70,12 +60,9 @@ if (outerWidth > 768) {
 
     // premiere card
 
-
     const cardHTML = document.createElement("div");
     cardHTML.classList.add("HTML");
     parent.appendChild(cardHTML);
-
-
 
     const frontHTML = document.createElement("div");
     frontHTML.classList.add("front", "faces");
@@ -93,14 +80,8 @@ if (outerWidth > 768) {
     const openHTML = document.querySelector(".open-html");
     backHTML.appendChild(openHTML);
 
-
-
     let heightHTML = openHTML.scrollHeight;
     cardHTML.style.height = [heightHTML] + "px";
-    // console.log(cardHTML.style.height);
-
-    // // myText.classList.item('boldText')
-    // console.log(cardHTML.classList);
 
     //seconde card
 
@@ -157,10 +138,7 @@ if (outerWidth > 768) {
 /**************** insertion article ****************/
 /***************************************************/
 
-// function constrArticle() {
 
-
-// }
 
 const form = document.querySelector(".ads-form")
 form.onsubmit = function (event) {
@@ -184,7 +162,7 @@ form.onsubmit = function (event) {
     const title = document.createElement("h2");
     newArticle.appendChild(title);
     title.textContent = addTitle.value
-    
+
     //     <span class="box-article">
     const boxArticle = document.createElement("div");
     boxArticle.classList.add("box-article");
@@ -197,15 +175,15 @@ form.onsubmit = function (event) {
     const img = document.createElement("img")
     img.classList.add("img-art");
     boxImg.appendChild(img);
-    
-      
-        if (addImg.value == "") {
-            img.src= `https://cdn.pixabay.com/photo/2018/03/23/22/11/knowledge-3255140_1280.jpg`
-        } else {
-             img.src = addImg.value
-        }
-    
-   
+
+
+    if (addImg.value == "") {
+        img.src = `https://cdn.pixabay.com/photo/2018/03/23/22/11/knowledge-3255140_1280.jpg`
+    } else {
+        img.src = addImg.value
+    }
+
+
     // img.src = selectImg;
     //         <p class="txt-art">
     const paragraphe = document.createElement("p");
