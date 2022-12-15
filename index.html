@@ -6,13 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
     <link
         href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,300;1,400&family=Pirata+One&display=swap"
         rel="stylesheet">
-    <title>The Wild Post</title>
+    <title>WildPost</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -25,39 +23,8 @@
                     <img class="wild" src="https://avatars.githubusercontent.com/u/8874047?s=280&v=4"
                         alt="logo wild code school">
                 </div>
-                <h1>The Wild Post</h1>
+                <h1>The WildPost</h1>
             </section>
-
-            <!-- menu smartphone -->
-
-            <section class="bar-menu">
-                <button class="bar-box">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </button>
-                <nav class="smartphone ">
-                    <ul>
-                        <li><a href="#">Journée d'intégration</a></li>
-                        <li><a href="#">Calendrier</a></li>
-                        <li><a href="#">Projet</a></li>
-                        <li><a href="#">Remote</a></li>
-                        <li><a href="#">chaussettes!!</a></li>
-                    </ul>
-                </nav>
-            </section>
-
-            <!-- menu grand ecran -->
-
-            <nav class="desktop">
-                <ul>
-                    <li><a href="#">Journée d'intégration</a></li>
-                    <li><a href="#">Calendrier</a></li>
-                    <li><a href="#">Projet</a></li>
-                    <li><a href="#">Remote</a></li>
-                    <li><a href="#">chaussettes!!</a></li>
-                </ul>
-            </nav>
         </section>
     </header>
 
@@ -65,33 +32,21 @@
 
         <!-- element de connexion -->
         <section class="Grid-top-main grid-left">
-            <div class="connection-content">
-                <p class="conect-title">Connexion</p>
-                <form action="" method="get" class="form-connexion form">
-                    <fieldset class="connexion">
-                        <div class="flex-connect">
-                            <label for="id">Identifiant : <input type="text" name="id" id="id"></label>
 
-                            <label for="pwd">Mot de passe : <input type="password" name="pwd" id="pwd"></label>
-                        </div>
-                        <input type="submit" class="btn-submit" value="ok">
-                    </fieldset>
-                </form>
-            </div>
             <span class="box-bases"></span>
             <h2 class="Title-bases">Les Bases </h2>
 
-            <!--nav class=theme-button a effacer en desktop -->
+            <!-- version mobile button + texte (passage desktop via js) -->
 
-            <button class="btn-theme HTML-button">
+            <p class="btn-theme HTML-button">
                 HTML
-            </button>
-            <button class="btn-theme CSS-button">
+            </p>
+            <p class="btn-theme CSS-button">
                 CSS
-            </button>
-            <button class="btn-theme JS-button">
+            </p>
+            <p class="btn-theme JS-button">
                 JavaScript
-            </button>
+            </p>
 
 
             <p class="notion-p open-html" id="open-html">
@@ -103,15 +58,13 @@
             </p>
 
             <p class="notion-p open-css" id="open-css">
-                CSS.
+            Le CSS (Cascading Style Sheets => feuille de style en cascade pour les anglophobes). <br>
+            permet de créer des pages web à l'apparence soignée (couleur emplacement des éléments...etc)
             </p>
 
             <p class="notion-p open-js" id="open-js">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius magnam excepturi, aliquid
-                blanditiis
-                commodi doloribus aut consequuntur repudiandae obcaecati omnis quis veritatis quas cumque
-                fugiat
-                quidem! Doloremque molestiae dolor nisi.
+                JavaScript est un langage de programmation qui vous permet de mettre en œuvre des éléments complexes sur des pages Web.<br>
+                Chaque fois qu'une page affiche des mises à jour de contenu en temps réel, des cartes interactives, des animations graphiques 2D / 3D ou un juke-box vidéo défilant, etc...
             </p>
 
 
@@ -119,44 +72,37 @@
 
         <!-- les articles -->
         <section class="articles">
+
             <div class="article">
-                <h2>TITRE 1</h2>
+                <h2>Les DOJO</h2>
                 <span class="box-article">
                     <div class="box-img">
                         <img class="img-art"
-                            src="https://cdn.pixabay.com/photo/2018/03/23/22/11/knowledge-3255140_1280.jpg"
+                            src="https://cdn.pixabay.com/photo/2015/01/09/11/09/meeting-594091__480.jpg"
                             alt="photo article">
+                    </div>
+                    <p class="txt-art">
+                       Les DOJO font partis des exercices hebdomadaire consistant à travailler sur un code, et ce en equipe.<br>
+                       communication reflexion et connaissance sont dévoleppés sur ce genre d'épreuve
+                    </p>
+                </span>
+            </div>
+
+            <div class="article">
+                <h2>Notre session</h2>
+                <span class="box-article">
+                    <div class="box-img">
+                        <img class="img-art" src="./assets/pictures/Paris.png" alt="photo intégration">
                     </div>
 
                     <p class="txt-art">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nihil quasi exercitationem!
-                        Iusto,
-                        consectetur! Nostrum suscipit impedit, voluptatibus omnis molestiae minima, velit corporis
-                        placeat
-                        odit at eum, voluptatem officia officiis.
+                        l'aventure des futurs web-dev a commencé le 02 novembre 2022, pour la plupart deja initiés aux
+                        rudiment du code. <br>savent ils ce qui les attendent ?
                     </p>
 
                 </span>
             </div>
-            <div class="article">
-                <h2>TITRE 2</h2>
-                <span class="box-article">
-                    <div class="box-img">
-                        <img class="img-art"
-                            src="https://cdn.pixabay.com/photo/2018/03/23/22/11/knowledge-3255140_1280.jpg"
-                            alt="photo article">
-                    </div>
-
-                    <p class="txt-art">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nihil quasi exercitationem!
-                        Iusto,
-                        consectetur! Nostrum suscipit impedit, voluptatibus omnis molestiae minima, velit corporis
-                        placeat
-                        odit at eum, voluptatem officia officiis.
-                    </p>
-
-                </span>
-            </div>
+           
             <div class="article">
                 <h2>TITRE 3</h2>
                 <span class="box-article">
@@ -216,24 +162,28 @@
             </div>
         </section>
 
-        <form action="" method="get" class="ads-form">
+        <!-- <form  class="ads-form" method="post" enctype="multipart/form-data"> -->
+        <form class="ads-form">
             <fieldset class="ads-form-content">Proposer un article
                 <div class="input-txt">
-                    <label for="user">nom : </label><input type="text" name="user" id="user" required>
+                    <label for="user">nom : </label><input type="text" name="user" id="user" placeholder="nom"required>
 
                     <label for="ads-title">Titre de l'article : </label><input type="text" name="ads-title"
-                        id="ads-title" required>
+                        id="ads-title" placeholder="Titre" required>
                 </div>
                 <div class="txt-area-content">
                     <label for="ads-art">texte de votre article : </label><textarea name="ads-art" id="ads-art"
-                        class="txt-area" required></textarea>
-                    <div class="end-ads">
-                        <label for="ads-photo" class="ads-photo-lab">joindre une image : <input type="file"
-                                name="ads-photo" id="ads-photo" accept="image/jpeg, image/png"></label>
-
-                        <input type="submit" class="btn-submit">
-                    </div>
+                        class="txt-area" rows="5" placeholder="paragraphe" required></textarea>
                 </div>
+                <div class="end-ads">
+                    <div class="block-img">
+                        <label for="ads-photo" class="ads-photo-lab">joindre une image par URL :</label>
+                        <input type="url" name="ads-photo" id="ads-photo" placeholder="http://">
+                    </div>
+                    <input type="submit" class="btn-submit">
+                </div>
+
+
             </fieldset>
         </form>
     </main>
@@ -247,8 +197,8 @@
     <footer>
         <div class="foot">
 
-            <a href="">Contact</a>
-            <a href="">Wild Code school</a>
+            <a href="mailto:wcsreickaed22@gmail.com">Contact</a>
+            <a href="https://www.wildcodeschool.com/fr-FR">Wild Code school</a>
 
         </div>
     </footer>
