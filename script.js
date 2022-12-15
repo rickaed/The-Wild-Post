@@ -199,7 +199,7 @@ form.onsubmit = function (event) {
     boxImg.appendChild(img);
     
       
-        if (addImg.value == null) {
+        if (addImg.value == "") {
             img.src= `https://cdn.pixabay.com/photo/2018/03/23/22/11/knowledge-3255140_1280.jpg`
         } else {
              img.src = addImg.value
